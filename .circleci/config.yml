@@ -1,20 +1,10 @@
-# Use the latest 2.1 version of CircleCI pipeline parocess engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
-version: 2.1
-
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+version: 2
 jobs:
   build:
     docker:
       - image: docker:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
       - setup_remote_docker:
           version: 18.09.3
       - run: docker version
-
-      
-
